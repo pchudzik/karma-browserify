@@ -2,6 +2,8 @@
 
 Fork of [karma-browserify](https://github.com/nikku/karma-browserify) with watchify + intellij support. More details can be found [here](https://github.com/nikku/karma-browserify/issues/205).
 
+[![Build Status](https://travis-ci.org/pchudzik/karma-browserify.svg?branch=master)](https://travis-ci.org/pchudzik/karma-browserify)
+
 ## Installation
 
 Get the plug-in via [npm](https://www.npmjs.org/).
