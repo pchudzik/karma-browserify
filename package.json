@@ -1,13 +1,14 @@
 {
-  "name": "karma-browserify",
-  "description": "A fast browserify integration for Karma that handles large projects with ease",
+  "name": "karma-browserify-intellij",
+  "description": "fork of karma-browserify with proper intellij support",
   "keywords": [
     "karma-plugin",
     "karma-preprocessor",
     "browserify-tool",
-    "browserify"
+    "browserify",
+    "intellij"
   ],
-  "version": "5.1.1",
+  "version": "1.5.1.1",
   "scripts": {
     "all": "grunt",
     "test": "grunt test"
@@ -20,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nikku/karma-browserify.git"
+    "url": "git@github.com:pchudzik/karma-browserify.git"
   },
   "bugs": "https://github.com/nikku/karma-browserify/issues",
   "dependencies": {

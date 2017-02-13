@@ -341,6 +341,40 @@ describe('karma-browserify', function() {
         bFile.restore();
       });
 
+      it('should rebundle when autoWatch=false but intellij=true', function (done) {
+        // given
+        var plugin = createPlugin({
+          autoWatch: false,
+          browserify: {intellij: true}
+        });
+
+        var bundleFile = createFile(bundle.location);
+        var testFile = createFile('test/fixtures/b.js');
+
+        // initial bundle creation
+        plugin.preprocess(bundleFile, [ testFile ], function() {
+
+          // reset spy on bundle
+          bundle.update.__spy.calls = [];
+          bundle.update.__spy.called = false;
+
+          // when
+          // update bundle file
+          delay(function() {
+            aFile.update('module.exports = "UPDATED";');
+          });
+
+          // give watch a chance to trigger
+          delay(function() {
+
+            // then
+            expect(bundle.update).to.have.been.called();
+
+            done();
+          }, BUNDLE_UPDATE_CHECK_DELAY);
+
+        });
+      });
 
       it('should update on change', function(done) {
 

@@ -1,9 +1,6 @@
-# karma-browserify
+# karma-browserify-intellij
 
-[![Build Status](https://travis-ci.org/nikku/karma-browserify.svg?branch=master)](https://travis-ci.org/nikku/karma-browserify)
-
-[karma-browserify](https://github.com/nikku/karma-browserify) is a fast [Browserify](http://browserify.org) integration for [Karma](https://karma-runner.github.io) that handles large projects with ease.
-
+Fork of [karma-browserify](https://github.com/nikku/karma-browserify) with watchify + intellij support. More details can be found [here](https://github.com/nikku/karma-browserify/issues/205).
 
 ## Installation
 
@@ -41,6 +38,16 @@ module.exports = function(karma) {
 
 Look at the [example directory](https://github.com/nikku/karma-browserify/tree/master/example) for a simple [browserify](http://browserify.org) + [jasmine](http://jasmine.github.io) project that uses this plug-in.
 
+### intellij config
+
+If you are using intellij karma runner to run your tests in IDE add intellij: true falg to browserify configuration.
+
+Example:
+```javascript
+browserify: {
+  intellij: true
+}
+```
 
 ### Browserify Config
 
@@ -175,6 +182,7 @@ module.exports = function(karma) {
     browserify: {
       debug: true,
       transform: [ 'brfs' ],
+      intellij: true,    // force autoWatch=true when running karma tests from intellij 
       configure: function(bundle) {
         bundle.on('prebundle', function() {
           bundle.external('foobar');
