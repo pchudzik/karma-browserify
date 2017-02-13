@@ -6,12 +6,12 @@ Fork of [karma-browserify](https://github.com/nikku/karma-browserify) with watch
 
 ## Installation
 
-Get the plug-in via [npm](https://www.npmjs.org/).
+Get the plug-in via [npm](https://www.npmjs.com/package/karma-browserify-intellij).
 
 You will also need to install [browserify](https://www.npmjs.com/package/browserify) and [watchify](https://www.npmjs.com/package/watchify) (for auto-watch only) with it.
 
 ```
-npm install --save-dev karma-browserify browserify watchify
+npm install --save-dev karma-browserify-intellij browserify watchify
 ```
 
 
@@ -32,6 +32,7 @@ module.exports = function(karma) {
 
     browserify: {
       debug: true,
+      intellij: true,
       transform: [ 'brfs' ]
     }
   });
