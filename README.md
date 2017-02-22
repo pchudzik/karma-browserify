@@ -51,6 +51,8 @@ browserify: {
   intellij: true
 }
 ```
+Sometimes intellij/karma (not sure which one) stops detecting changes made to files and serves stale files.
+To fix it disable safe write (Settings -> Appearance and Behaviour -> System settings)
 
 ### Browserify Config
 
